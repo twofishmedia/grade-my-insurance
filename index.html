@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Grade My Insurance</title>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<meta name="description" content="A free, line-by-line review of your auto and home insurance from a licensed agent serving South Carolina and North Carolina.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=Caveat:wght@700&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <a class="brand" href="/"><svg class="mark" viewBox="0 0 64 64" width="30" height="30" aria-hidden="true"><path d="M32 6C50 5 59 16 58 32C57 49 46 59 31 58C15 58 5 47 6 31C7 16 17 6 34 7" fill="none" stroke="#C2352A" stroke-width="5" stroke-linecap="round"/><g transform="rotate(-6 32 32)" fill="none" stroke="#F2B33D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 44L24 20L32 44M19.5 35H28.5"/><path d="M37 32H50M43.5 25.5V38.5"/></g></svg>Grade My <em>Insurance</em></a>
+  <a class="nav" href="tel:+18647071131">(864) 707-1131</a>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">Auto, home &amp; renters insurance across the Carolinas</div>
+  <h1>Find out what your insurance <em>actually</em> covers.</h1>
+  <p>A free, line-by-line review of your auto, home or renters coverage from a licensed agent based in the Upstate. We shop multiple companies for you, and you switch only if it makes sense.</p>
+  <div class="row"><a class="btn" href="#quote">Get my free review</a></div>
+</div></header>
+
+<main><div class="wrap">
+
+  <section class="section-h" aria-labelledby="howH" style="gap:18px">
+    <h2 id="howH">How it works</h2>
+    <ol class="steps-list">
+      <li><strong>Tell us a little.</strong> Two minutes, no obligation.</li>
+      <li><strong>Send your declarations page.</strong> A photo from your phone or insurance app is fine.</li>
+      <li><strong>Get a side-by-side comparison.</strong> We walk through it with you and you decide.</li>
+    </ol>
+  </section>
+
+  <section class="section-h" aria-labelledby="whyH" style="gap:18px">
+    <h2 id="whyH">Why get a review?</h2>
+    <ul class="steps-list">
+      <li><strong>Rates have changed.</strong> If your policy just auto-renews, you may be paying more than you need to.</li>
+      <li><strong>Coverage gaps hide in the fine print.</strong> Low liability limits or a high deductible can cost you when it matters most.</li>
+      <li><strong>Discounts get missed.</strong> Bundling, safe driving, home features and more can lower your price.</li>
+    </ul>
+  </section>
+
+  <section class="also" aria-labelledby="whoH">
+    <h2 id="whoH">Insurance for <em>everyone</em></h2>
+    <p>Drivers, families, homeowners, renters, first-time buyers and anyone who just wants a second opinion. If you live in South Carolina or North Carolina, we can help.</p>
+    <div class="row"><a class="btn" href="#quote">Start my review</a></div>
+  </section>
+
+  <section class="card" id="quote" aria-labelledby="quoteH">
+    <div class="section-h">
+      <h2 id="quoteH">Get your free review</h2>
+      <p>A licensed agent will compare your current coverage line by line. No obligation.</p>
+    </div>
+    <form name="quote" id="quoteForm" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+      <input type="hidden" name="form-name" value="quote">
+      <input type="hidden" name="page" value="home">
+      <input type="hidden" name="utm_source" value="">
+      <input type="hidden" name="utm_campaign" value="">
+      <input type="hidden" name="utm_content" value="">
+      <p class="hp" aria-hidden="true"><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <div class="grid2">
+        <label for="fName">First name<input type="text" id="fName" name="first_name" autocomplete="given-name" required></label>
+        <label for="lName">Last name<input type="text" id="lName" name="last_name" autocomplete="family-name" required></label>
+      </div>
+      <div class="grid2">
+        <label for="phone">Mobile phone<input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" maxlength="14" placeholder="(864) 555-0123" required></label>
+        <label for="email">Email<input type="email" id="email" name="email" autocomplete="email" required></label>
+      </div>
+      <div class="grid2">
+        <label for="zip">ZIP code<input type="text" id="zip" name="zip" inputmode="numeric" maxlength="5" autocomplete="postal-code" required></label>
+        <label for="role">Do you own or rent your home?
+          <select id="role" name="role" required>
+            <option value="">Choose one</option>
+            <option>Own my home</option>
+            <option>Rent</option>
+            <option>Live with family</option>
+            <option>Other</option>
+          </select></label>
+      </div>
+      <div class="grid2">
+        <label for="lines">What should we quote?
+          <select id="lines" name="quote_lines">
+            <option>Auto and home</option>
+            <option>Auto and renters</option>
+            <option>Auto only</option>
+            <option>Home only</option>
+            <option>Renters only</option>
+            <option>Not sure yet</option>
+          </select></label>
+        <label for="renew">When does your policy renew? <span>(optional)</span>
+          <select id="renew" name="renewal">
+            <option value="">Not sure</option>
+            <option>Within 30 days</option><option>1 to 3 months</option><option>3 to 6 months</option><option>More than 6 months</option>
+          </select></label>
+      </div>
+      <label class="consent" for="consent"><input type="checkbox" id="consent" name="call_text_consent" value="Yes">
+        Yes, Dixon Insurance Agency may call or text me at the number above about my quote, including by automated means. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to opt out. See our <a href="/privacy/">privacy policy</a>.</label>
+      <div class="err" id="formErr" role="alert"></div>
+      <div class="row"><button class="btn" type="submit">Request my quote</button></div>
+      <p class="fine">Have your current declarations page handy. It makes the comparison faster and more accurate.</p>
+    </form>
+  </section>
+
+</div></main>
+
+<footer><div class="wrap">
+  <p>Insurance products are underwritten by the insurance companies we represent. Coverage, discounts, and savings vary by company, state, and individual circumstances. A review does not guarantee lower rates.</p>
+  <p>Dixon Insurance Agency · Licensed in South Carolina and North Carolina · <a href="/privacy/">Privacy policy</a></p>
+</div></footer>
+
+<script src="/assets/site.js"></script>
+</body>
+</html>

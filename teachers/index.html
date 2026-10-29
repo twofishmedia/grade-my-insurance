@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Grade My Insurance for Carolina Educators</title>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<meta name="description" content="Free side-by-side auto and home insurance review for teachers and school staff in South Carolina and North Carolina, from a licensed agent.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=Caveat:wght@700&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <a class="brand" href="/"><svg class="mark" viewBox="0 0 64 64" width="30" height="30" aria-hidden="true"><path d="M32 6C50 5 59 16 58 32C57 49 46 59 31 58C15 58 5 47 6 31C7 16 17 6 34 7" fill="none" stroke="#C2352A" stroke-width="5" stroke-linecap="round"/><g transform="rotate(-6 32 32)" fill="none" stroke="#F2B33D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 44L24 20L32 44M19.5 35H28.5"/><path d="M37 32H50M43.5 25.5V38.5"/></g></svg>Grade My <em>Insurance</em></a>
+  <a class="nav" href="tel:+18647071131">Call (864) 707-1131</a>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">Auto &amp; home insurance for Carolina educators</div>
+  <h1>When did someone last <em>grade</em> your car insurance?</h1>
+  <p>We work with teachers and school staff across South Carolina and North Carolina. We'll compare your auto and home coverage side by side, check for any educator discounts you qualify for, and work around your school day.</p>
+  <div class="row"><a class="btn" href="#quote">Compare my rate</a></div>
+</div></header>
+
+<main><div class="wrap">
+
+  <section class="section-h" aria-labelledby="perksH" style="gap:22px">
+    <div class="section-h">
+      <h2 id="perksH">Insurance help that fits a teacher's schedule</h2>
+      <p>No call centers and no pressure. Just a real agent who knows what a school year looks like.</p>
+    </div>
+    <ul class="perks">
+      <li><div class="tag">Line by line</div><h3>A real side-by-side review</h3><p>We compare your current policy to what we can offer and explain what you're actually paying for.</p></li>
+      <li><div class="tag">After 3:30</div><h3>Calls around the bell schedule</h3><p>Before first bell, after dismissal, on a planning period, or over summer break. Text works too.</p></li>
+      <li><div class="tag">Ask us</div><h3>Educator discounts</h3><p>We'll check for any discounts or benefits available to you as an educator.</p></li>
+      <li><div class="tag">One agent</div><h3>Auto, home, and renters together</h3><p>Bundle what makes sense and keep one local person to call when something happens.</p></li>
+      <li><div class="tag">Gaps</div><h3>The things teachers carry</h3><p>Classroom supplies in the trunk, fundraiser cash, a student who needs a ride. We'll make sure you know what your policy covers.</p></li>
+      <li><div class="tag">Carolinas</div><h3>Real and accountable</h3><p>Based in the Upstate and licensed across South Carolina and North Carolina. Switch only if it makes sense.</p></li>
+    </ul>
+  </section>
+
+  <section class="also" aria-labelledby="alsoH">
+    <h2 id="alsoH">Not an educator? <em>No problem.</em></h2>
+    <p>Friends, family, neighbors, and anyone else in the Carolinas can get the same free side-by-side review. We'd be glad to shop your rates too.</p>
+    <div class="row"><a class="btn" href="#quote">Get my free quote</a></div>
+  </section>
+
+  <section class="card" id="quote" aria-labelledby="quoteH">
+    <div class="section-h">
+      <h2 id="quoteH">See what you could save</h2>
+      <p>A licensed agent will compare your current coverage line by line. No obligation.</p>
+    </div>
+    <form name="quote" id="quoteForm" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+      <input type="hidden" name="form-name" value="quote">
+      <input type="hidden" name="page" value="teachers">
+      <input type="hidden" name="utm_source" value="">
+      <input type="hidden" name="utm_campaign" value="">
+      <input type="hidden" name="utm_content" value="">
+      <p class="hp" aria-hidden="true"><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <div class="grid2">
+        <label for="fName">First name<input type="text" id="fName" name="first_name" autocomplete="given-name" required></label>
+        <label for="lName">Last name<input type="text" id="lName" name="last_name" autocomplete="family-name" required></label>
+      </div>
+      <div class="grid2">
+        <label for="phone">Mobile phone<input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" maxlength="14" placeholder="(864) 555-0123" required></label>
+        <label for="email">Email<input type="email" id="email" name="email" autocomplete="email" required></label>
+      </div>
+      <div class="grid2">
+        <label for="zip">ZIP code<input type="text" id="zip" name="zip" inputmode="numeric" maxlength="5" autocomplete="postal-code" required></label>
+        <label for="role">Your role
+          <select id="role" name="role" required>
+            <option value="">Choose one</option>
+            <option>Classroom teacher</option>
+            <option>School staff (para, office, bus, cafeteria, custodial, IT)</option>
+            <option>Administrator or counselor</option>
+            <option>College or university educator</option>
+            <option>Retired educator</option>
+            <option>Not an educator</option>
+          </select></label>
+      </div>
+      <div class="grid2">
+        <label for="lines">What should we quote?
+          <select id="lines" name="quote_lines">
+            <option>Auto and home</option>
+            <option>Auto and renters</option>
+            <option>Auto only</option>
+            <option>Home only</option>
+          </select></label>
+        <label for="renew">When does your policy renew? <span>(optional)</span>
+          <select id="renew" name="renewal">
+            <option value="">Not sure</option>
+            <option>Within 30 days</option><option>1 to 3 months</option><option>3 to 6 months</option><option>More than 6 months</option>
+          </select></label>
+      </div>
+      <label for="school">School or district <span>(optional)</span><input type="text" id="school" name="school" placeholder="e.g., Boiling Springs High School, Spartanburg District 5"></label>
+      <label class="consent" for="consent"><input type="checkbox" id="consent" name="call_text_consent" value="Yes">
+        Yes, Dixon Insurance Agency may call or text me at the number above about my quote, including by automated means. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to opt out. See our <a href="/privacy/">privacy policy</a>.</label>
+      <div class="err" id="formErr" role="alert"></div>
+      <div class="row"><button class="btn" type="submit">Request my quote</button></div>
+      <p class="fine">Have your current declarations page handy. It makes the comparison faster and more accurate.</p>
+    </form>
+  </section>
+
+</div></main>
+
+<footer><div class="wrap">
+  <p>Insurance products are underwritten by the insurance companies we represent. Coverage, discounts, and savings vary by company, state, and individual circumstances. A review does not guarantee lower rates.</p>
+  <p>Dixon Insurance Agency · Licensed in South Carolina and North Carolina · <a href="/privacy/">Privacy policy</a></p>
+</div></footer>
+
+<script src="/assets/site.js"></script>
+</body>
+</html>
