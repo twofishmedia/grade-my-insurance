@@ -1,0 +1,8 @@
+# Netlify configuration for grademyinsurance.com
+# The site is plain static files served from the repo root (no build step).
+
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
