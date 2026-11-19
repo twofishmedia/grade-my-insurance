@@ -7,7 +7,9 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <meta name="description" content="Free side-by-side auto and home insurance review for teachers and school staff in South Carolina and North Carolina, from a licensed agent.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=Caveat:wght@700&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=Caveat:wght@700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=Caveat:wght@700&display=swap"></noscript>
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
@@ -52,25 +54,38 @@
       <h2 id="quoteH">See what you could save</h2>
       <p>A licensed agent will compare your current coverage line by line. No obligation.</p>
     </div>
-    <form name="quote" id="quoteForm" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+    <form name="quote" id="quoteForm" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field" data-quote-form novalidate>
       <input type="hidden" name="form-name" value="quote">
       <input type="hidden" name="page" value="teachers">
       <input type="hidden" name="utm_source" value="">
       <input type="hidden" name="utm_campaign" value="">
       <input type="hidden" name="utm_content" value="">
       <p class="hp" aria-hidden="true"><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-      <div class="grid2">
-        <label for="fName">First name<input type="text" id="fName" name="first_name" autocomplete="given-name" required></label>
-        <label for="lName">Last name<input type="text" id="lName" name="last_name" autocomplete="family-name" required></label>
-      </div>
-      <div class="grid2">
-        <label for="phone">Mobile phone<input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" maxlength="14" placeholder="(864) 555-0123" required></label>
-        <label for="email">Email<input type="email" id="email" name="email" autocomplete="email" required></label>
-      </div>
-      <div class="grid2">
-        <label for="zip">ZIP code<input type="text" id="zip" name="zip" inputmode="numeric" maxlength="5" autocomplete="postal-code" required></label>
-        <label for="role">Your role
-          <select id="role" name="role" required>
+      <p class="step-label" data-step-label hidden></p>
+
+      <fieldset class="step" data-step="1">
+        <legend class="sr-only">How to reach you</legend>
+        <div class="grid2">
+          <label for="fName">First name<input type="text" id="fName" name="first_name" autocomplete="given-name" required></label>
+          <label for="phone">Mobile phone<input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" maxlength="14" placeholder="(864) 555-0123" required></label>
+        </div>
+        <div class="grid2">
+          <label for="zip">ZIP code<input type="text" id="zip" name="zip" inputmode="numeric" maxlength="5" autocomplete="postal-code" required></label>
+        </div>
+        <label class="consent" for="consent"><input type="checkbox" id="consent" name="call_text_consent" value="Yes">
+        <span>Yes, Dixon Insurance Agency may call or text me at the number above about my quote, including by automated means. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to opt out. See our <a href="/privacy/">privacy policy</a>.</span></label>
+        <div class="row"><button class="btn" type="button" data-next hidden>Continue</button></div>
+      </fieldset>
+
+      <fieldset class="step" data-step="2">
+        <legend class="step-intro">Almost done. Everything below is optional, but it helps us quote faster.</legend>
+        <div class="grid2">
+          <label for="lName"><span class="lbl">Last name <small>(optional)</small></span><input type="text" id="lName" name="last_name" autocomplete="family-name"></label>
+          <label for="email"><span class="lbl">Email <small>(optional, for your confirmation)</small></span><input type="email" id="email" name="email" autocomplete="email"></label>
+        </div>
+        <div class="grid2">
+          <label for="role"><span class="lbl">Your role <small>(optional)</small></span>
+          <select id="role" name="role">
             <option value="">Choose one</option>
             <option>Classroom teacher</option>
             <option>School staff (para, office, bus, cafeteria, custodial, IT)</option>
@@ -79,36 +94,36 @@
             <option>Retired educator</option>
             <option>Not an educator</option>
           </select></label>
-      </div>
-      <div class="grid2">
-        <label for="lines">What should we quote?
+          <label for="lines">What should we quote?
           <select id="lines" name="quote_lines">
             <option>Auto and home</option>
             <option>Auto and renters</option>
             <option>Auto only</option>
             <option>Home only</option>
           </select></label>
-        <label for="renew">When does your policy renew? <span>(optional)</span>
+        </div>
+        <div class="grid2">
+          <label for="renew"><span class="lbl">When does your policy renew? <small>(optional)</small></span>
           <select id="renew" name="renewal">
             <option value="">Not sure</option>
             <option>Within 30 days</option><option>1 to 3 months</option><option>3 to 6 months</option><option>More than 6 months</option>
           </select></label>
-      </div>
-      <label for="besttime">Best time to reach you <span>(optional)</span>
-        <select id="besttime" name="best_time">
-          <option value="">Anytime is fine</option>
-          <option>Before school</option>
-          <option>Planning period or lunch</option>
-          <option>After school (3:30 to 5 PM)</option>
-          <option>Evening (after 5 PM)</option>
-          <option>Weekend</option>
-          <option>Text me first</option>
-        </select></label>
-      <label for="school">School or district <span>(optional)</span><input type="text" id="school" name="school" placeholder="e.g., Boiling Springs High School, Spartanburg District 5"></label>
-      <label class="consent" for="consent"><input type="checkbox" id="consent" name="call_text_consent" value="Yes">
-        Yes, Dixon Insurance Agency may call or text me at the number above about my quote, including by automated means. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to opt out. See our <a href="/privacy/">privacy policy</a>.</label>
-      <div class="err" id="formErr" role="alert"></div>
-      <div class="row"><button class="btn" type="submit">Request my quote</button></div>
+          <label for="besttime"><span class="lbl">Best time to reach you <small>(optional)</small></span>
+          <select id="besttime" name="best_time">
+            <option value="">Anytime is fine</option>
+            <option>Before school</option>
+            <option>Planning period or lunch</option>
+            <option>After school (3:30 to 5 PM)</option>
+            <option>Evening (after 5 PM)</option>
+            <option>Weekend</option>
+            <option>Text me first</option>
+          </select></label>
+        </div>
+        <label for="school"><span class="lbl">School or district <small>(optional)</small></span><input type="text" id="school" name="school" placeholder="e.g., Boiling Springs High School, Spartanburg District 5"></label>
+        <div class="row"><button class="btn" type="submit">Get my quote</button><button class="btn-link" type="button" data-back hidden>Back</button></div>
+      </fieldset>
+
+      <div class="err" id="formErr" data-error role="alert"></div>
       <p class="fine">Have your current declarations page handy. It makes the comparison faster and more accurate.</p>
     </form>
   </section>
@@ -120,6 +135,6 @@
   <p>Dixon Insurance Agency · Licensed in South Carolina and North Carolina · <a href="/privacy/">Privacy policy</a></p>
 </div></footer>
 
-<script src="/assets/site.js"></script>
+<script type="module" src="/assets/js/main.js"></script>
 </body>
 </html>
