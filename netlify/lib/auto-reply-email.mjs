@@ -1,6 +1,7 @@
 // Content of the automatic reply sent to someone who submits the quote form.
 // Edit the wording here; the sending logic lives elsewhere.
 
+const BOOK_CALL_URL = "https://calendar.app.google/NiK9ATf2sySZvvkr6";
 const POLICY_SHARE_URL = "https://app.usecanopy.com/c/horace-mann-friar-dixon";
 const PHONE_DISPLAY = "(864) 707-1131";
 const PHONE_LINK = "tel:+18647071131";
@@ -31,6 +32,7 @@ export function buildAutoReplyEmail({ firstName } = {}) {
 
   const html = `<p>${escapeHtml(greeting)}</p>
 <p>Thanks for requesting a free insurance review. We have your information, and someone from our team will reach out shortly. During business hours, that's usually within a few minutes.</p>
+<p>Want to skip the phone tag? <a href="${BOOK_CALL_URL}"><strong>Pick a time for your call</strong></a> and your agent will call you then.</p>
 <p>Want the fastest, most accurate quote? <a href="${POLICY_SHARE_URL}"><strong>Share your current policy</strong></a> in about two minutes. Just sign in to your current insurance company, and we'll take it from there. No digging for paperwork.</p>
 <p>With your current coverage in hand, we can compare side by side and skip most of the back-and-forth questions.</p>
 <p>Prefer to talk now? Call or text us at <a href="${PHONE_LINK}">${PHONE_DISPLAY}</a>.</p>
@@ -39,6 +41,8 @@ export function buildAutoReplyEmail({ firstName } = {}) {
   const text = `${greeting}
 
 Thanks for requesting a free insurance review. We have your information, and someone from our team will reach out shortly. During business hours, that's usually within a few minutes.
+
+Want to skip the phone tag? Pick a time for your call: ${BOOK_CALL_URL}
 
 Want the fastest, most accurate quote? Share your current policy in about two minutes: ${POLICY_SHARE_URL}
 Just sign in to your current insurance company, and we'll take it from there. No digging for paperwork.

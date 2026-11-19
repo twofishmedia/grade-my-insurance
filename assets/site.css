@@ -81,6 +81,10 @@ input[type=text],input[type=email],input[type=tel],select{font:inherit;color:var
 .done p{margin:0}
 .done .pen{font-family:var(--f-pen);font-size:30px;color:var(--pencil)}
 .done ol{margin:0;padding-left:1.3em;display:grid;gap:8px}
+.book{background:var(--surface);color:var(--ink);border-radius:var(--r);padding:20px;display:grid;gap:10px;justify-items:start}
+.book h2{font-size:clamp(20px,4vw,24px)}
+.book p{color:var(--muted)}
+.next-h{font-weight:700;margin-top:6px!important}
 .phone{text-decoration:none;font-family:var(--f-display);font-size:26px;font-weight:800;color:var(--pencil)}
 
 .legal h1{font-size:clamp(28px,5vw,36px)}
