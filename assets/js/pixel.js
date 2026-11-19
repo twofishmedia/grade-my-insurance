@@ -1,5 +1,8 @@
 // Meta Pixel: loads the tracker, records a page view, and records a Lead
-// on pages marked with <body data-lead="true"> (the thank-you page).
+// on the thank-you page (<body data-lead="true">) when the visitor arrived there
+// by submitting the quote form.
+
+import { consumeLeadSubmitted } from "./lead-flag.js";
 
 export function initPixel(pixelId) {
   if (!/^\d+$/.test(pixelId) || window.fbq) return;
@@ -21,5 +24,5 @@ export function initPixel(pixelId) {
 
   fbq("init", pixelId);
   fbq("track", "PageView");
-  if (document.body.dataset.lead === "true") fbq("track", "Lead");
+  if (document.body.dataset.lead === "true" && consumeLeadSubmitted()) fbq("track", "Lead");
 }

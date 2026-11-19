@@ -10,6 +10,7 @@
 //     <div data-error role="alert"></div>
 
 import { phoneDigits, bindPhoneFormatting } from "./phone.js";
+import { markLeadSubmitted } from "./lead-flag.js";
 
 const EMAIL_PATTERN = /^\S+@\S+\.\S+$/;
 
@@ -93,5 +94,6 @@ export function initQuoteForm(form) {
       return;
     }
     reformatPhone();
+    markLeadSubmitted();
   });
 }
